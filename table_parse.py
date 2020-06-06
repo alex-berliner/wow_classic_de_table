@@ -166,8 +166,8 @@ def main():
                         item_yield_csv_string = item_yield_csv_string.replace("#ilvl", str(ilvl))
                         item_yield_csv_string = item_yield_csv_string.replace("#item_drop_id", str(yielded))
                         item_yield_csv_string = item_yield_csv_string.replace("#item_drop_name", item_db[yielded])
-                        item_yield_csv_string = item_yield_csv_string.replace("#item_amt", str(avg_yield))
-                        item_yield_csv_string = item_yield_csv_string.replace("#yield_pct", str(drop_chance))
+                        item_yield_csv_string = item_yield_csv_string.replace("#item_amt",  "%2.5f"%avg_yield)
+                        item_yield_csv_string = item_yield_csv_string.replace("#yield_pct", "%2.5f"%drop_chance)
                         item_yield_csv_string = item_yield_csv_string.replace("#trials", str(int(de_total)))
                         csv += item_yield_csv_string + "\n"
     print("table written to detable.csv")
